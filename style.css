@@ -43,4 +43,26 @@ video {
 
 main {
   text-align: center;
+  padding-bottom: 2rem;
+}
+
+section {
+  padding: 1rem 0 2rem;
+}
+
+section#showreel {
+  padding-top: 0;
+}
+
+section#music {
+  background-color: rgb(149, 152, 199);
+}
+
+section#drones {
+  background-color: rgb(184, 199, 149);
+}
+
+section p{
+  padding-bottom: 2rem;
+  font-style: italic;
 }
