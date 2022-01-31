@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5 Boilerplate</title>
+    <title>Aramis Prod</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <header>
       <div class="video-overlay">
-        <video autoplay muted>
+        <video autoplay muted id="header-showreel">
           <source src="/images/showreel.webm" type="video/webm">
         </video>
       </div>
@@ -20,6 +20,19 @@
       </div>
     </header>
 
+  <main>
+    <h2>Showreel</h2>
+    <iframe
+      id="yt-showreel"
+      width="300"
+      src="https://www.youtube.com/embed/OmcDAImNzZk?enablejsapi=1&modestbranding=1&autohide=1&showinfo=0&controls=0"
+      title="Showreel"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+    </main>
   </body>
+
+  <script src="index.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
 </html>

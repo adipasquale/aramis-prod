@@ -2,8 +2,10 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
 header {
   height: 150px;
+  padding-bottom: 2rem;
 }
 
 .text-overlay {
@@ -37,4 +39,8 @@ header img {
 
 video {
   width: 100%;
+}
+
+main {
+  text-align: center;
 }
