@@ -17,6 +17,14 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("admin/config.yml");
   eleventyConfig.addPassthroughCopy("bootstrap-grid.min.css");
 
+  eleventyConfig.addCollection("videosMusique", function (collectionApi) {
+    return collectionApi.getFilteredByTags("video", "musique").sort((a, b) => a.data.position - b.data.position)
+  })
+
+  eleventyConfig.addCollection("videosDrone", function (collectionApi) {
+    return collectionApi.getFilteredByTags("video", "drone").sort((a, b) => a.data.position - b.data.position)
+  })
+
   eleventyConfig.addFilter("toYoutubeEmbedUrl", (url) =>
     `https://www.youtube.com/embed/${urlParser.parse(url).id}?enablejsapi=1&modestbranding=1`
   )

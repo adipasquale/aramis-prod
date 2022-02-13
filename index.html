@@ -22,47 +22,64 @@
     </header>
 
   <main>
-    <section id="showreel">
-      <h2>Showreel</h2>
-      <iframe
-        id="yt-showreel"
-        width="300"
-        src="https://www.youtube.com/embed/OmcDAImNzZk?enablejsapi=1&modestbranding=1"
-        title="Showreel"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </section>
+    <div class="container px-0">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <section id="showreel">
+            <h2>Showreel</h2>
+            <iframe
+              id="yt-showreel"
+              src="https://www.youtube.com/embed/fyM8ThJjW98?enablejsapi=1&modestbranding=1"
+              title="Showreel"
+              frameborder="0"
+              allowfullscreen></iframe>
+          </section>
+        </div>
+      </div>
+    </div>
 
     <section id="music">
-      <h2>Musique</h2>
-      {%- for video in collections.video -%}
-        <iframe
-          id="yt-showreel"
-          width="300"
-          src="{{ video.data.url | toYoutubeEmbedUrl }}"
-          title="{{ video.data.title }}"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <p>
-          {{ video.data.description }}
-        </p>
-      {%- endfor %}
+      <div class="container px-0">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h2>Musique</h2>
+            {%- for video in collections.videosMusique  -%}
+              <iframe
+                id="yt-showreel"
+                src="{{ video.data.url | toYoutubeEmbedUrl }}"
+                title="{{ video.data.title }}"
+                frameborder="0"
+                allowfullscreen></iframe>
+              <p>
+                {{ video.data.description }}
+              </p>
+            {%- endfor %}
+          </div>
+        </div>
+      </div>
     </section>
-
 
     <section id="drones">
-      <h2>Drones</h2>
-      <iframe
-        id="yt-showreel"
-        width="300"
-        src="https://www.youtube.com/embed/fyM8ThJjW98?enablejsapi=1&modestbranding=1"
-        title="Showreel"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <p>
-        Drones partout justice nulle part
-      </p>
+      <div class="container px-0">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h2>Drones</h2>
+            {%- for video in collections.videosDrone  -%}
+              <iframe
+                id="yt-showreel"
+                src="{{ video.data.url | toYoutubeEmbedUrl }}"
+                title="{{ video.data.title }}"
+                frameborder="0"
+                allowfullscreen></iframe>
+              <p>
+                {{ video.data.description }}
+              </p>
+            {%- endfor %}
+          </div>
+        </div>
+      </div>
     </section>
+
     <section id="profile">
       <h2>Biographie</h2>
       <div id="avatar">

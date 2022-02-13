@@ -6,7 +6,7 @@ media_folder: "images"
 public_folder: "/images"
 
 # to be able to run "npx netlify-cms-proxy-server" for local backend
-# local_backend: true
+local_backend: true
 
 collections:
   - label: "Video"
@@ -15,7 +15,25 @@ collections:
     create: true
     editor:
       preview: false
+    sortable_fields: ["position"]
+    view_filters:
+      - label: Vidéos Musique
+        field: category
+        pattern: Musique
+      - label: Vidéos Drones
+        field: category
+        pattern: Drones
     fields:
       - { label: "Youtube URL", name: "url", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
+      - label: "Position"
+        name: "position"
+        widget: "number"
+        value_type: int
+      - widget: select
+        label: "Catégories"
+        name: "tags"
+        multiple: true
+        create: true
+        options: ["video", "musique", "drones"]
