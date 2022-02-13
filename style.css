@@ -3,6 +3,11 @@ html, body {
   padding: 0;
 }
 
+/* 11ty displays empty <p> around template contents */
+p:empty {
+  display: none;
+}
+
 header {
   height: 150px;
   padding-bottom: 2rem;

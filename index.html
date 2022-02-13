@@ -34,46 +34,18 @@
 
     <section id="music">
       <h2>Musique</h2>
-      <iframe
-        id="yt-showreel"
-        width="300"
-        src="https://www.youtube.com/embed/J2w0PtkV4yY?enablejsapi=1&modestbranding=1"
-        title="Showreel"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <p>
-        Un voyage au coeur de l'Amérique latine
-      </p>
-      <iframe
-        id="yt-showreel"
-        width="300"
-        src="https://www.youtube.com/embed/x8ILwO36zog?enablejsapi=1&modestbranding=1"
-        title="Showreel"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <p>
-        L'océan nous attend
-      </p>
-      <iframe
-        id="yt-showreel"
-        width="300"
-        src="https://www.youtube.com/embed/WOA7y3UnfuE?enablejsapi=1&modestbranding=1"
-        title="Showreel"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <p>
-        Les marionnettes prennent vie
-      </p>
-      <iframe
-        id="yt-showreel"
-        width="300"
-        src="https://www.youtube.com/embed/66tXS7uRsKw?enablejsapi=1&modestbranding=1"
-        title="Showreel"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <p>
-        Douceur au soleil
-      </p>
+      {%- for video in collections.video -%}
+        <iframe
+          id="yt-showreel"
+          width="300"
+          src="{{ video.data.url | toYoutubeEmbedUrl }}"
+          title="{{ video.data.title }}"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p>
+          {{ video.data.description }}
+        </p>
+      {%- endfor %}
     </section>
 
 

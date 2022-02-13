@@ -1,4 +1,6 @@
-module.exports = function(eleventyConfig) {
+const urlParser = require("js-video-url-parser");
+
+module.exports = function (eleventyConfig) {
   // Output directory: _site
 
   // Copy `img/` to `_site/img`
@@ -12,4 +14,8 @@ module.exports = function(eleventyConfig) {
   // Keeps the same directory structure.
   eleventyConfig.addPassthroughCopy("style.css");
   eleventyConfig.addPassthroughCopy("index.js");
+
+  eleventyConfig.addFilter("toYoutubeEmbedUrl", (url) =>
+    `https://www.youtube.com/embed/${urlParser.parse(url).id}?enablejsapi=1&modestbranding=1`
+  )
 };
