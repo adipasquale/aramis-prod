@@ -5,6 +5,8 @@ backend:
 media_folder: "images"
 public_folder: "/images"
 
+display_url: https://www.aramisprod.com
+locale: fr
 # to be able to run "npx netlify-cms-proxy-server" for local backend
 local_backend: true
 
@@ -14,15 +16,15 @@ collections:
     folder: "video"
     create: true
     editor:
-      preview: false
+      preview: true
     sortable_fields: ["position"]
-    view_filters:
-      - label: Vidéos Musique
-        field: category
-        pattern: Musique
-      - label: Vidéos Drones
-        field: category
-        pattern: Drones
+    view_groups:
+      - label: Catégorie
+        field: tags
+      #   pattern: Musique
+      # - label: Vidéos Drones
+      #   field: category
+      #   pattern: Drones
     fields:
       - { label: "Youtube URL", name: "url", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
