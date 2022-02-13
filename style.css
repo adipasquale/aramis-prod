@@ -1,6 +1,8 @@
 html, body {
   margin: 0;
   padding: 0;
+  background-color: #000;
+  color: #909090;
 }
 
 /* 11ty displays empty <p> around template contents */
@@ -15,6 +17,8 @@ header {
 }
 
 .text-overlay {
+  position: relative;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,15 +38,22 @@ header img {
   filter: invert();
 }
 
+.col-video-wrapper {
+  position: relative;
+  margin-bottom: 5rem;
+}
+
 .video-overlay {
   position: absolute;
-  z-index: -1;
-  width: 100%;
-  min-height: 180px;
+  z-index: 1;
   height: 30vh;
-  top: -30px;
+  max-height: 100%;
   filter: blur(1.5px);
   overflow: hidden;
+}
+
+.video-overlay video {
+  width: 100%;
 }
 
 iframe {
@@ -61,14 +72,6 @@ section {
 
 section#showreel {
   padding-top: 0;
-}
-
-section#music {
-  background-color: rgb(149, 152, 199);
-}
-
-section#drones {
-  background-color: rgb(184, 199, 149);
 }
 
 section p{
@@ -94,12 +97,27 @@ section p{
   padding-top: 1rem;
 }
 
+p {
+  font-size: 1.2rem;
+}
+
 
 footer {
-  background-color: #999;
+  border-top: 1px solid;
   padding: 1rem;
   display: flex;
 }
+footer a {
+  color: inherit;
+}
 footer div:not(:first-child) {
   margin-left: 1rem;
+}
+
+#artists ul {
+  text-align: left;
+}
+
+#artists a {
+  color: inherit;
 }

@@ -21,10 +21,6 @@ collections:
     view_groups:
       - label: Catégorie
         field: tags
-      #   pattern: Musique
-      # - label: Vidéos Drones
-      #   field: category
-      #   pattern: Drones
     fields:
       - { label: "Youtube URL", name: "url", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
@@ -38,4 +34,4 @@ collections:
         name: "tags"
         multiple: true
         create: true
-        options: ["video", "musique", "drones"]
+        options: ["video", "musique", "documentaire", "stop-motion", "drones"]

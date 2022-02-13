@@ -21,6 +21,14 @@ module.exports = function (eleventyConfig) {
     return collectionApi.getFilteredByTags("video", "musique").sort((a, b) => a.data.position - b.data.position)
   })
 
+  eleventyConfig.addCollection("videosDocumentaires", function (collectionApi) {
+    return collectionApi.getFilteredByTags("video", "documentaire").sort((a, b) => a.data.position - b.data.position)
+  })
+
+  eleventyConfig.addCollection("videosStopmotion", function (collectionApi) {
+    return collectionApi.getFilteredByTags("video", "stop-motion").sort((a, b) => a.data.position - b.data.position)
+  })
+
   eleventyConfig.addCollection("videosDrone", function (collectionApi) {
     return collectionApi.getFilteredByTags("video", "drone").sort((a, b) => a.data.position - b.data.position)
   })

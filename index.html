@@ -10,14 +10,19 @@
   </head>
   <body>
     <header>
-      <div class="video-overlay">
-        <video autoplay muted id="header-showreel">
-          <source src="/images/showreel.webm" type="video/webm">
-        </video>
-      </div>
-      <div class="text-overlay">
-        <img src="/images/logo.png" />
-        <h1>Aramis Prod</h1>
+    <div class="container px-0">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 col-video-wrapper">
+          <div class="video-overlay">
+            <video autoplay muted id="header-showreel" loop>
+              <source src="/images/header.webm" type="video/webm">
+            </video>
+          </div>
+          <div class="text-overlay">
+            <img src="/images/logo.png" />
+            <h1>Aramis Prod</h1>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -25,11 +30,11 @@
     <div class="container px-0">
       <div class="row justify-content-center">
         <div class="col-lg-8">
-          <section id="showreel">
-            <h2>Showreel</h2>
+          <section id="showreel" class="py-4">
+            <!-- <h2>Showreel</h2> -->
             <iframe
               id="yt-showreel"
-              src="https://www.youtube.com/embed/fyM8ThJjW98?enablejsapi=1&modestbranding=1"
+              src="https://www.youtube.com/embed/1FN-iANakM8?enablejsapi=1&modestbranding=1"
               title="Showreel"
               frameborder="0"
               allowfullscreen></iframe>
@@ -41,11 +46,83 @@
     <section id="music">
       <div class="container px-0">
         <div class="row justify-content-center">
+          <div class="col-lg-8 col-video-wrapper">
+            <div class="video-overlay">
+              <video autoplay muted id="header-showreel" loop>
+                <source src="/images/musique.webm" type="video/webm">
+              </video>
+            </div>
+            <div class="text-overlay">
+              <h1>Musique</h1>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
           <div class="col-lg-8">
-            <h2>Musique</h2>
             {%- for video in collections.videosMusique  -%}
               <iframe
-                id="yt-showreel"
+                src="{{ video.data.url | toYoutubeEmbedUrl }}"
+                title="{{ video.data.title }}"
+                frameborder="0"
+                allowfullscreen></iframe>
+              <p>
+                {{ video.data.description }}
+              </p>
+            {%- endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="documentaire">
+      <div class="container px-0">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-video-wrapper">
+            <div class="video-overlay">
+              <video autoplay muted id="header-showreel" loop>
+                <source src="/images/documentaires.webm" type="video/webm">
+              </video>
+            </div>
+            <div class="text-overlay">
+              <h1>Documentaire</h1>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            {%- for video in collections.videosDocumentaires -%}
+              <iframe
+                src="{{ video.data.url | toYoutubeEmbedUrl }}"
+                title="{{ video.data.title }}"
+                frameborder="0"
+                allowfullscreen></iframe>
+              <p>
+                {{ video.data.description }}
+              </p>
+            {%- endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stopmotion">
+      <div class="container px-0">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-video-wrapper">
+            <div class="video-overlay">
+              <video autoplay muted id="header-showreel" loop>
+                <source src="/images/stopmotion.webm" type="video/webm">
+              </video>
+            </div>
+            <div class="text-overlay">
+              <h1>Stop-Motion</h1>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            {%- for video in collections.videosStopmotion -%}
+              <iframe
                 src="{{ video.data.url | toYoutubeEmbedUrl }}"
                 title="{{ video.data.title }}"
                 frameborder="0"
@@ -62,11 +139,21 @@
     <section id="drones">
       <div class="container px-0">
         <div class="row justify-content-center">
+          <div class="col-lg-8 col-video-wrapper">
+            <div class="video-overlay">
+              <video autoplay muted id="header-showreel" loop>
+                <source src="/images/drones.webm" type="video/webm">
+              </video>
+            </div>
+            <div class="text-overlay">
+              <h1>Drones</h1>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
           <div class="col-lg-8">
-            <h2>Drones</h2>
             {%- for video in collections.videosDrone  -%}
               <iframe
-                id="yt-showreel"
                 src="{{ video.data.url | toYoutubeEmbedUrl }}"
                 title="{{ video.data.title }}"
                 frameborder="0"
@@ -80,14 +167,62 @@
       </div>
     </section>
 
+    <section id="artists">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h2>Artistes</h2>
+          <ul>
+            <li>
+            <a href="https://www.facebook.com/aquiloquevocesquiserem" target="_blank">
+              Aquilo que vocês quiserem
+            </a>
+
+            <li>
+            <a href="https://www.facebook.com/JeanMarcSauvagnargues" target="_blank">
+              Jean Marc Sauvagnargues
+            </a>
+            </li>
+
+            <li>
+            <a href="https://www.facebook.com/patricia.lestre" target="_blank">
+              Patricia Lestre
+            </a>
+            </li>
+
+            <li>
+            <a href="https://www.facebook.com/bajocielobanda" target="_blank">
+              Bajo Cielo
+            </a>
+            </li>
+
+
+            <li>
+            <a href="https://www.facebook.com/abandaparis" target="_blank">
+              A Banda
+            </a>
+            </li>
+
+
+
+            <li><a href="https://www.facebook.com/lehna.sam.9">
+              Lehna
+            </a>
+            </li>
+
+
+            <li>Aurélien Hoffmann </li>
+
+            <li>Clémentine Fouquet</li>
+
+      </ul>
+    </section>
+
     <section id="profile">
-      <h2>Biographie</h2>
+      <h2>Auteur</h2>
       <div id="avatar">
         <img src="images/simon.png" alt="Simon Monteil" />
         <div>Simon Monteil</div>
       </div>
-      <p>
-        J'ai toujours adoré les génériques de films. Je suis né dans le cinéma. J'aime le vidéomontage.
     </section>
   </main>
 
@@ -95,7 +230,7 @@
     <div>Aramis Prod</div>
     <div>
       <a href="mailto:contact@aramisprod.fr">
-        ✉️ contact@aramisprod.fr
+        contact@aramisprod.fr
       </a>
     </div>
   </footer>
