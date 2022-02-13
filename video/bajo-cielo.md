@@ -1,8 +1,8 @@
 ---
 url: https://www.youtube.com/watch?v=J2w0PtkV4yY
 title: Bajo Cielo
-description: Un voyage au coeur de l'Amérique latine
-position: 2
+description: Musique latine pour un live endiablé à Paris
+position: 7
 tags:
   - video
   - musique
