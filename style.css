@@ -81,22 +81,9 @@ section p{
   font-style: italic;
 }
 
-#avatar {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  text-align: left;
-}
-#avatar img {
+#profile img {
   width: 150px;
   border-radius: 30px;
-}
-#avatar div {
-  /* padding-left: 1rem; */
-  font-size: 1.2rem;
-}
-#profile p {
-  padding-top: 1rem;
 }
 
 p {
