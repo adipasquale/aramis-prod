@@ -2,6 +2,8 @@ backend:
   # Use netlify identity as backend
   name: git-gateway
   branch: master
+  # name: proxy
+  # proxy_url: http://localhost:8081/api/v1
   ### enable below lines for github integration ###
   # name: github
   # repo: surjithctly/neat-starter

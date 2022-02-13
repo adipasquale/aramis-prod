@@ -14,6 +14,7 @@ module.exports = function (eleventyConfig) {
   // Keeps the same directory structure.
   eleventyConfig.addPassthroughCopy("style.css");
   eleventyConfig.addPassthroughCopy("index.js");
+  eleventyConfig.addPassthroughCopy("admin/config.yml");
 
   eleventyConfig.addFilter("toYoutubeEmbedUrl", (url) =>
     `https://www.youtube.com/embed/${urlParser.parse(url).id}?enablejsapi=1&modestbranding=1`
