@@ -30,7 +30,7 @@ module.exports = function (eleventyConfig) {
   })
 
   eleventyConfig.addCollection("videosDrone", function (collectionApi) {
-    return collectionApi.getFilteredByTags("video", "drone").sort((a, b) => a.data.position - b.data.position)
+    return collectionApi.getFilteredByTags("video", "drones").sort((a, b) => a.data.position - b.data.position)
   })
 
   eleventyConfig.addFilter("toYoutubeEmbedUrl", (url) =>

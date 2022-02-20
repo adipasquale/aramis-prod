@@ -9,29 +9,25 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <header>
-      <div class="container px-0">
-        <div class="row justify-content-center">
-          <div class="col-lg-8 col-video-wrapper">
-            <div class="video-overlay">
-              <video id="header-showreel" loop autoplay muted playsinline>
-                <source src="/images/header.webm" type="video/webm">
-                <source src="/images/header.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="text-overlay">
-              <img src="/images/logo.png" />
-              <h1>Aramis Prod</h1>
-            </div>
-          </div>
-        </div>
+    <header class="video-bg-wrapper">
+      <div class="video-overlay">
+        <video id="header-showreel" loop autoplay muted playsinline>
+          <source src="/images/header.webm" type="video/webm">
+          <source src="/images/header.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="text-overlay">
+        <img src="/images/logo.png" />
+        <h1>Aramis Prod</h1>
       </div>
     </header>
-
   <main>
-    <div class="container px-0">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
+
+    <h2>Production / Réalisation / Montage</h2>
+
+    <div class="container-fluid px-0">
+      <div class="row justify-content-center mx-0">
+        <div class="col-lg-8 px-0">
           <div id="showreel" class="py-4">
             <!-- <h2>Showreel</h2> -->
             <iframe
@@ -46,31 +42,31 @@
     </div>
 
     <section id="music">
-      <div class="container px-0">
-        <div class="row justify-content-center">
-          <div class="col-lg-8 col-video-wrapper">
-            <div class="video-overlay">
-              <video id="header-showreel" loop autoplay muted playsinline>
-                <source src="/images/musique.webm" type="video/webm">
-                <source src="/images/musique.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="text-overlay">
-              <h1>Musique</h1>
-            </div>
-          </div>
+      <div class="video-bg-wrapper">
+        <div class="video-overlay">
+          <video id="header-showreel" loop autoplay muted playsinline>
+            <source src="/images/musique.webm" type="video/webm">
+            <source src="/images/musique.mp4" type="video/mp4">
+          </video>
         </div>
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
+        <div class="text-overlay">
+          <h1>Musique</h1>
+        </div>
+      </div>
+      <div class="container px-0">
+        <div class="row justify-content-center mx-0">
+          <div class="col-lg-8 px-0">
             {%- for video in collections.videosMusique  -%}
+              <div class="yt-video-wrapper">
               <iframe
                 src="{{ video.data.url | toYoutubeEmbedUrl }}"
                 title="{{ video.data.title }}"
                 frameborder="0"
                 allowfullscreen></iframe>
-              <p>
+              <p class="text-italic">
                 {{ video.data.description }}
               </p>
+              </div>
             {%- endfor %}
           </div>
         </div>
@@ -78,31 +74,31 @@
     </section>
 
     <section id="documentaire">
-      <div class="container px-0">
-        <div class="row justify-content-center">
-          <div class="col-lg-8 col-video-wrapper">
-            <div class="video-overlay">
-              <video id="header-showreel" loop autoplay muted playsinline>
-                <source src="/images/documentaires.webm" type="video/webm">
-                <source src="/images/documentaires.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="text-overlay">
-              <h1>Documentaire</h1>
-            </div>
-          </div>
+      <div class="video-bg-wrapper">
+        <div class="video-overlay">
+          <video id="header-showreel" loop autoplay muted playsinline>
+            <source src="/images/documentaires.webm" type="video/webm">
+            <source src="/images/documentaires.mp4" type="video/mp4">
+          </video>
         </div>
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
+        <div class="text-overlay">
+          <h1>Documentaire</h1>
+        </div>
+      </div>
+      <div class="container px-0">
+        <div class="row justify-content-center mx-0">
+          <div class="col-lg-8 px-0">
             {%- for video in collections.videosDocumentaires -%}
+              <div class="yt-video-wrapper">
               <iframe
                 src="{{ video.data.url | toYoutubeEmbedUrl }}"
                 title="{{ video.data.title }}"
                 frameborder="0"
                 allowfullscreen></iframe>
-              <p>
+              <p class="text-italic">
                 {{ video.data.description }}
               </p>
+              </div>
             {%- endfor %}
           </div>
         </div>
@@ -110,31 +106,31 @@
     </section>
 
     <section id="stopmotion">
-      <div class="container px-0">
-        <div class="row justify-content-center">
-          <div class="col-lg-8 col-video-wrapper">
-            <div class="video-overlay">
-              <video id="header-showreel" loop autoplay muted playsinline>
-                <source src="/images/stopmotion.webm" type="video/webm">
-                <source src="/images/stopmotion.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="text-overlay">
-              <h1>Stop-Motion</h1>
-            </div>
-          </div>
+      <div class="video-bg-wrapper">
+        <div class="video-overlay">
+          <video id="header-showreel" loop autoplay muted playsinline>
+            <source src="/images/stopmotion.webm" type="video/webm">
+            <source src="/images/stopmotion.mp4" type="video/mp4">
+          </video>
         </div>
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
+        <div class="text-overlay">
+          <h1>Stop-Motion</h1>
+        </div>
+      </div>
+      <div class="container px-0">
+        <div class="row justify-content-center mx-0">
+          <div class="col-lg-8 px-0">
             {%- for video in collections.videosStopmotion -%}
+              <div class="yt-video-wrapper">
               <iframe
                 src="{{ video.data.url | toYoutubeEmbedUrl }}"
                 title="{{ video.data.title }}"
                 frameborder="0"
                 allowfullscreen></iframe>
-              <p>
+              <p class="text-italic">
                 {{ video.data.description }}
               </p>
+              </div>
             {%- endfor %}
           </div>
         </div>
@@ -142,31 +138,31 @@
     </section>
 
     <section id="drones">
-      <div class="container px-0">
-        <div class="row justify-content-center">
-          <div class="col-lg-8 col-video-wrapper">
-            <div class="video-overlay">
-              <video id="header-showreel" loop autoplay muted playsinline>
-                <source src="/images/drones.webm" type="video/webm">
-                <source src="/images/drones.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="text-overlay">
-              <h1>Drones</h1>
-            </div>
-          </div>
+      <div class="video-bg-wrapper">
+        <div class="video-overlay">
+          <video id="header-showreel" loop autoplay muted playsinline>
+            <source src="/images/drones.webm" type="video/webm">
+            <source src="/images/drones.mp4" type="video/mp4">
+          </video>
         </div>
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
+        <div class="text-overlay">
+          <h1>Drone</h1>
+        </div>
+      </div>
+      <div class="container px-0">
+        <div class="row justify-content-center mx-0">
+          <div class="col-lg-8 px-0">
             {%- for video in collections.videosDrone  -%}
+              <div class="yt-video-wrapper">
               <iframe
                 src="{{ video.data.url | toYoutubeEmbedUrl }}"
                 title="{{ video.data.title }}"
                 frameborder="0"
                 allowfullscreen></iframe>
-              <p>
+              <p class="text-italic">
                 {{ video.data.description }}
               </p>
+              </div>
             {%- endfor %}
           </div>
         </div>
@@ -175,7 +171,7 @@
 
     <section id="artists">
       <div class="container px-0">
-        <div class="row justify-content-middle align-items-center">
+        <div class="row justify-content-middle align-items-center mx-0">
           <div class="col-sm-5">
             <h2>Artistes</h2>
           </div>
@@ -218,19 +214,22 @@
 
     <section id="profile">
       <div class="container px-0">
-        <!--
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <h2>Auteur</h2>
-          </div>
-        </div>
-        -->
-        <div class="row justify-content-center align-items-center">
-          <div class="col-6">
-            <img src="images/simon.png" alt="Simon Monteil" />
-          </div>
-          <div class="col-6">
+        <div class="row align-items-center justify-content-center mx-0">
+          <div class="col-md-3">
+            <img src="images/simon.png" alt="Simon Monteil" class="max-width-100" />
             <h3>Simon Monteil</h3>
+          </div>
+          <div class="col-md-6 text-left">
+            <p>
+              Aussi loin que je m'en souvienne, j'ai toujours été passionné par l'image, que ce soit la photo ou la vidéo.<br />
+              Il y a 10 ans, après une formation de 3 ans à l'ESEC ( école supérieur d'études cinématographiques de Paris ) dont 1 an en spécialisation montage, je me lançais dans la vie active.<br />
+              Fort de mon expérience de 7 ans à la télévision, je décide aujourd'hui d'être à mon compte et ainsi pouvoir travailler sur des projets qui me correspondent plus.
+            </p>
+            <p>
+              Outre mon expertise, je possède du matériel audiovisuel professionnel
+              ( plusieurs caméras, stabilisateur, drone, lumières, micros, etc ) qui me permet de réaliser des vidéos de qualité de la conception jusqu'à l'habillage.<br />
+              Ce site est pour moi un moyen de vous partager mon travail et peut être éveiller en vous une volonté de collaboration future.
+            </p>
           </div>
         </div>
       </div>
@@ -239,8 +238,8 @@
 
   <footer>
     <div class="container px-0">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
+      <div class="row justify-content-center align-items-center mx-0">
+        <div class="col-lg-8 px-0">
           Aramis Prod ·
           <a href="mailto:contact@aramisprod.fr">
             contact@aramisprod.fr
