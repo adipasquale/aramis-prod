@@ -1,7 +1,7 @@
 ---
-url: https://www.youtube.com/watch?v=_T57BnHwCWU&t=2s
+url: https://www.youtube.com/watch?v=NQEO0bBwudw
 title: Drone Porto
-description: "Balade dans le ciel de Porto "
+description: "Balade jazzy dans le ciel de Porto "
 position: 1
 tags:
   - video
