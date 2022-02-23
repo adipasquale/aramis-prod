@@ -16,6 +16,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("index.js");
   eleventyConfig.addPassthroughCopy("admin/config.yml");
   eleventyConfig.addPassthroughCopy("bootstrap-grid.min.css");
+  eleventyConfig.addPassthroughCopy("ShadowsIntoLightTwo-Regular.ttf");
 
   eleventyConfig.addCollection("videosMusique", function (collectionApi) {
     return collectionApi.getFilteredByTags("video", "musique").sort((a, b) => a.data.position - b.data.position)
