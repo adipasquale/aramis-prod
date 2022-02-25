@@ -29,11 +29,14 @@ header.video-bg-wrapper {
   color: white;
   height: 100%;
   overflow: hidden;
+  font-family: "Shadows Into Light Two";
+}
+.text-overlay h2 {
+  font-size: 38px;
 }
 
 header h1 {
   font-size: 42px;
-  font-family: "Shadows Into Light Two";
 }
 
 header img {
