@@ -31,6 +31,7 @@ header.video-bg-wrapper {
   overflow: hidden;
   font-family: "Shadows Into Light Two";
 }
+
 .text-overlay h2 {
   font-size: 38px;
 }
@@ -41,7 +42,8 @@ header h1 {
 
 header img {
   display: inline-block;
-  width: 150px;
+  height: 300px;
+  max-height: 30vh;
   margin-right: 1em;
   filter: invert();
 }
@@ -151,6 +153,7 @@ footer div:not(:first-child) {
 
 h2.subtitle {
   margin: 5rem 0;
+  font-family: "Shadows Into Light Two";
 }
 
 @media only screen and (max-width : 460px) {
