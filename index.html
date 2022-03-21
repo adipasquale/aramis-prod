@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Aramis Prod</title>
-    <link rel="stylesheet" href="bootstrap-grid.min.css">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <header class="video-bg-wrapper">
-      <div class="video-overlay">
-        <video id="header-showreel" loop autoplay muted playsinline>
-          <source src="/images/header.webm" type="video/webm">
-          <source src="/images/header.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="text-overlay">
-        <img src="/images/logo.png" />
-        <h1>Aramis Prod</h1>
-      </div>
-    </header>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Aramis Prod</title>
+  <link rel="stylesheet" href="bootstrap-grid.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="video-bg-wrapper">
+    <div class="video-overlay">
+      <video id="header-showreel" loop autoplay muted playsinline>
+        <source src="/images/header.webm" type="video/webm">
+        <source src="/images/header.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="text-overlay">
+      <img src="/images/logo.png" />
+      <h1>Aramis Prod</h1>
+    </div>
+  </header>
 
   <main>
     <h2 class="subtitle">Production&nbsp;/&nbsp;Réalisation&nbsp;/&nbsp;Montage</h2>
@@ -30,12 +32,8 @@
         <div class="col-lg-8 px-0">
           <div id="showreel" class="py-4">
             <!-- <h2>Showreel</h2> -->
-            <iframe
-              id="yt-showreel"
-              src="https://www.youtube.com/embed/_j8_CBWFIAQ?enablejsapi=1&modestbranding=1"
-              title="Showreel"
-              frameborder="0"
-              allowfullscreen></iframe>
+            <iframe id="yt-showreel" src="https://www.youtube.com/embed/_j8_CBWFIAQ?enablejsapi=1&modestbranding=1"
+              title="Showreel" frameborder="0" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -43,138 +41,35 @@
 
     <ul class="menu">
       <li><a href="#music">Musique</a></li>
-      <li><a href="#documentaire">Documentaire</a></li>
+      <li><a href="#documentaires">Documentaire</a></li>
       <li><a href="#stopmotion">Stop-Motion</a></li>
       <li><a href="#drones">Drone</a></li>
     </ul>
 
-    <section id="music">
-      <div class="video-bg-wrapper">
-        <div class="video-overlay">
-          <video id="header-showreel" loop autoplay muted playsinline>
-            <source src="/images/musique.webm" type="video/webm">
-            <source src="/images/musique.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="text-overlay">
-          <h2>Musique</h2>
-        </div>
-      </div>
-      <div class="container px-0">
-        <div class="row justify-content-center mx-0">
-          <div class="col-lg-8 px-0">
-            {%- for video in collections.videosMusique  -%}
-              <div class="yt-video-wrapper">
-              <iframe
-                src="{{ video.data.url | toYoutubeEmbedUrl }}"
-                title="{{ video.data.title }}"
-                frameborder="0"
-                allowfullscreen></iframe>
-              <p class="text-italic">
-                {{ video.data.description }}
-              </p>
-              </div>
-            {%- endfor %}
-          </div>
-        </div>
-      </div>
-    </section>
+    {% assign section_id = "music" %}
+    {% assign section_title = "Musique" %}
+    {% assign videos = collections.videosMusique %}
+    {% include "section.html" %}
 
-    <section id="documentaire">
-      <div class="video-bg-wrapper">
-        <div class="video-overlay">
-          <video id="header-showreel" loop autoplay muted playsinline>
-            <source src="/images/documentaires.webm" type="video/webm">
-            <source src="/images/documentaires.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="text-overlay">
-          <h2>Documentaire</h2>
-        </div>
-      </div>
-      <div class="container px-0">
-        <div class="row justify-content-center mx-0">
-          <div class="col-lg-8 px-0">
-            {%- for video in collections.videosDocumentaires -%}
-              <div class="yt-video-wrapper">
-              <iframe
-                src="{{ video.data.url | toYoutubeEmbedUrl }}"
-                title="{{ video.data.title }}"
-                frameborder="0"
-                allowfullscreen></iframe>
-              <p class="text-italic">
-                {{ video.data.description }}
-              </p>
-              </div>
-            {%- endfor %}
-          </div>
-        </div>
-      </div>
-    </section>
+    {% assign section_id = "documentaires" %}
+    {% assign section_title = "Documentaire" %}
+    {% assign videos = collections.videosDocumentaires %}
+    {% include "section.html" %}
 
-    <section id="stopmotion">
-      <div class="video-bg-wrapper">
-        <div class="video-overlay">
-          <video id="header-showreel" loop autoplay muted playsinline>
-            <source src="/images/stopmotion.webm" type="video/webm">
-            <source src="/images/stopmotion.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="text-overlay">
-          <h2>Stop-Motion</h2>
-        </div>
-      </div>
-      <div class="container px-0">
-        <div class="row justify-content-center mx-0">
-          <div class="col-lg-8 px-0">
-            {%- for video in collections.videosStopmotion -%}
-              <div class="yt-video-wrapper">
-              <iframe
-                src="{{ video.data.url | toYoutubeEmbedUrl }}"
-                title="{{ video.data.title }}"
-                frameborder="0"
-                allowfullscreen></iframe>
-              <p class="text-italic">
-                {{ video.data.description }}
-              </p>
-              </div>
-            {%- endfor %}
-          </div>
-        </div>
-      </div>
-    </section>
+    {% assign section_id = "documentaires" %}
+    {% assign section_title = "Documentaire" %}
+    {% assign videos = collections.videosDocumentaires %}
+    {% include "section.html" %}
 
-    <section id="drones">
-      <div class="video-bg-wrapper">
-        <div class="video-overlay">
-          <video id="header-showreel" loop autoplay muted playsinline>
-            <source src="/images/drones.webm" type="video/webm">
-            <source src="/images/drones.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="text-overlay">
-          <h2>Drone</h2>
-        </div>
-      </div>
-      <div class="container px-0">
-        <div class="row justify-content-center mx-0">
-          <div class="col-lg-8 px-0">
-            {%- for video in collections.videosDrone  -%}
-              <div class="yt-video-wrapper">
-              <iframe
-                src="{{ video.data.url | toYoutubeEmbedUrl }}"
-                title="{{ video.data.title }}"
-                frameborder="0"
-                allowfullscreen></iframe>
-              <p class="text-italic">
-                {{ video.data.description }}
-              </p>
-              </div>
-            {%- endfor %}
-          </div>
-        </div>
-      </div>
-    </section>
+    {% assign section_id = "stopmotion" %}
+    {% assign section_title = "Stop-Motion" %}
+    {% assign videos = collections.videosStopmotion %}
+    {% include "section.html" %}
+
+    {% assign section_id = "drones" %}
+    {% assign section_title = "Drone" %}
+    {% assign videos = collections.videosDrone %}
+    {% include "section.html" %}
 
     <section id="artists">
       <div class="container px-0">
@@ -235,14 +130,19 @@
           </div>
           <div class="col-md-6 text-left">
             <p>
-              Aussi loin que je m'en souvienne, j'ai toujours été passionné par l'image, que ce soit la photo ou la vidéo.<br />
-              Il y a 10 ans, après une formation de 3 ans à l'ESEC ( école supérieur d'études cinématographiques de Paris ), je me lançais dans la vie active.<br />
-              Fort de mon expérience de 7 ans à la télévision, je décide aujourd'hui d'être à mon compte et ainsi pouvoir travailler sur des projets qui me correspondent plus.
+              Aussi loin que je m'en souvienne, j'ai toujours été passionné par l'image, que ce soit la photo ou la
+              vidéo.<br />
+              Il y a 10 ans, après une formation de 3 ans à l'ESEC ( école supérieur d'études cinématographiques de
+              Paris ), je me lançais dans la vie active.<br />
+              Fort de mon expérience de 7 ans à la télévision, je décide aujourd'hui d'être à mon compte et ainsi
+              pouvoir travailler sur des projets qui me correspondent plus.
             </p>
             <p>
               Outre mon expertise, je possède du matériel audiovisuel professionnel
-              ( plusieurs caméras, stabilisateur, drone, lumières, micros, etc ) qui me permet de réaliser des vidéos de qualité de la conception jusqu'à l'habillage.<br />
-              Ce site est pour moi un moyen de vous partager mon travail et peut être éveiller en vous une volonté de collaboration future.
+              ( plusieurs caméras, stabilisateur, drone, lumières, micros, etc ) qui me permet de réaliser des vidéos de
+              qualité de la conception jusqu'à l'habillage.<br />
+              Ce site est pour moi un moyen de vous partager mon travail et peut être éveiller en vous une volonté de
+              collaboration future.
             </p>
           </div>
         </div>
@@ -262,8 +162,9 @@
       </div>
     </div>
   </footer>
-  </body>
+</body>
 
-  <script src="index.js"></script>
-  <script src="https://www.youtube.com/iframe_api"></script>
+<script src="index.js"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
+
 </html>

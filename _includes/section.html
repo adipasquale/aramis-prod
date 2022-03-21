@@ -1,0 +1,28 @@
+<section id="{{ section_id }}">
+  <div class="video-bg-wrapper">
+    <div class="video-overlay">
+      <video id="header-showreel" loop autoplay muted playsinline>
+        <source src="/images/{{ section_id }}.webm" type="video/webm">
+        <source src="/images/{{ section_id }}.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="text-overlay">
+      <h2>{{ section_title }}</h2>
+    </div>
+  </div>
+  <div class="container px-0">
+    <div class="row justify-content-center mx-0">
+      <div class="col-lg-8 px-0">
+        {% for video in videos %}
+        <div class="yt-video-wrapper">
+          <iframe src="{{ video.data.url | toYoutubeEmbedUrl }}" title="{{ video.data.title }}" frameborder="0"
+            allowfullscreen></iframe>
+          <p class="text-italic">
+            {{ video.data.description }}
+          </p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
