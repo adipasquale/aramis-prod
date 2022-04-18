@@ -1,171 +1,227 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Aramis Prod</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="lite-yt-embed.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="home" class="h-screen relative">
+      <div class="absolute z-10 h-full w-full blur-sm overflow-hidden">
+        <video
+          class="w-full h-full object-cover"
+          id="header-showreel"
+          loop
+          autoplay
+          muted
+          playsinline
+        >
+          <source src="/images/header.webm" type="video/webm" />
+          <source src="/images/header.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div
+        class="relative flex items-center justify-center text-white h-full z-20"
+      >
+        <img class="inline-block h-80 invert" src="/images/logo.png" />
+      </div>
+      <div class="w-full absolute bottom-6 z-50">
+        <a href="#intro">
+          <img class="m-auto" alt="Continuer" src="/images/scroll-down.svg" width="80px" />
+        </a>
+      </div>
+    </header>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Aramis Prod</title>
-  <link rel="stylesheet" href="bootstrap-grid.min.css">
-  <link rel="stylesheet" href="style.css">
-</head>
+    <aside class="fixed text-right right-4 top-4 md:right-8 z-40">
+      <ul
+        class="flex flex-col items-end content-end list-none text-black text-lg font-medium"
+      >
+        <li class="mb-3">
+          <a class="link-menu" href="#music">Musique</a>
+        </li>
+        <li class="mb-3">
+          <a class="link-menu" href="#documentaires">Documentaire</a>
+        </li>
+        <li class="mb-3">
+          <a class="link-menu" href="#stopmotion">Stop-Motion</a>
+        </li>
+        <li class="mb-3">
+          <a class="link-menu" href="#drones">Drone</a>
+        </li>
+      </ul>
+    </aside>
 
-<body>
-  <header class="video-bg-wrapper">
-    <div class="video-overlay">
-      <video id="header-showreel" loop autoplay muted playsinline>
-        <source src="/images/header.webm" type="video/webm">
-        <source src="/images/header.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="text-overlay">
-      <img src="/images/logo.png" />
-      <!-- <h1>Aramis Prod</h1> -->
-    </div>
-  </header>
-
-  <main>
-    <h2 class="subtitle">Aramis Prod <br />Production&nbsp;/&nbsp;Réalisation&nbsp;/&nbsp;Montage</h2>
-
-
-    <div class="container-fluid px-0">
-      <div class="row justify-content-center mx-0">
-        <div class="col-lg-8 px-0">
-          <div id="showreel" class="py-4">
-            <!-- <h2>Showreel</h2> -->
-            <iframe id="yt-showreel" src="https://www.youtube.com/embed/_j8_CBWFIAQ?enablejsapi=1&modestbranding=1"
-              title="Showreel" frameborder="0" allowfullscreen></iframe>
+    <main>
+      <div id="intro" class="flex justify-center mx-auto max-w-7xl text-left text-white">
+        <div class="py-40 px-6 xl:px-0 w-full md:w-auto">
+          <div class="flex flex-col md:flex-row items-center">
+            <div>
+              <img class="invert pr-2" width="130px" src="/images/logo.png" />
+            </div>
+            <div class="w-full md:text-left text-center">
+              <h2 class="text-4xl md:text-6xl xl:text-7xl font-bold">
+                Aramis Prod
+              </h2>
+              <h3 class="text-xl md:text-2xl font-medium mt-2">
+                Production/Réalisation/Montage
+              </h3>
+            </div>
+          </div>
+          <div class="mt-4">
+            <div class="m-auto">
+              <lite-youtube
+                class="z-10 border-8 border-white"
+                videoid="_j8_CBWFIAQ"
+                params="modestbranding=1"
+              ></lite-youtube>
+              <p
+                class="bg-white text-black px-2 pb-2 inline-block text-xl uppercase"
+              >
+                Showreel
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <ul class="menu">
-      <li><a href="#music">Musique</a></li>
-      <li><a href="#documentaires">Documentaire</a></li>
-      <li><a href="#stopmotion">Stop-Motion</a></li>
-      <li><a href="#drones">Drone</a></li>
-    </ul>
+      {% assign section_id = "music" %}
+      {% assign section_title = "Musique" %}
+      {% assign videos = collections.videosMusique %}
+      {% assign section_type = "text-white bg-slate-500" %}
+      {% include "section.html" %}
 
-    {% assign section_id = "music" %}
-    {% assign section_title = "Musique" %}
-    {% assign videos = collections.videosMusique %}
-    {% include "section.html" %}
+      {% assign section_id = "documentaires" %}
+      {% assign section_title = "Docu" %}
+      {% assign videos = collections.videosDocumentaires %}
+      {% assign section_type = "bg-gray-900 text-white" %}
+      {% include "section.html" %}
 
-    {% assign section_id = "documentaires" %}
-    {% assign section_title = "Documentaire" %}
-    {% assign videos = collections.videosDocumentaires %}
-    {% include "section.html" %}
+      {% assign section_id = "stopmotion" %}
+      {% assign section_title = "Stop-Motion" %}
+      {% assign videos = collections.videosStopmotion %}
+      {% assign section_type = "bg-purple-300 text-white" %}
+      {% include "section.html" %}
 
-    {% assign section_id = "documentaires" %}
-    {% assign section_title = "Documentaire" %}
-    {% assign videos = collections.videosDocumentaires %}
-    {% include "section.html" %}
+      {% assign section_id = "drones" %}
+      {% assign section_title = "Drone" %}
+      {% assign videos = collections.videosDrone %}
+      {% assign section_type = "bg-blue-200 text-white" %}
+      {% include "section.html" %}
 
-    {% assign section_id = "stopmotion" %}
-    {% assign section_title = "Stop-Motion" %}
-    {% assign videos = collections.videosStopmotion %}
-    {% include "section.html" %}
-
-    {% assign section_id = "drones" %}
-    {% assign section_title = "Drone" %}
-    {% assign videos = collections.videosDrone %}
-    {% include "section.html" %}
-
-    <section id="artists">
-      <div class="container px-0">
-        <div class="row justify-content-middle align-items-center mx-0">
-          <div class="col-sm-5">
-            <h2>Artistes</h2>
-          </div>
-          <div class="col-sm-7">
-            <ul>
-              <li>
-                <a href="https://www.facebook.com/aquiloquevocesquiserem" target="_blank">
-                  Aquilo que vocês quiserem
-                </a>
-              <li>
-                <a href="https://www.facebook.com/JeanMarcSauvagnargues" target="_blank">
-                  Jean Marc Sauvagnargues
-                </a>
-              </li>
-              <li>
-                <a href="https://www.facebook.com/patricia.lestre" target="_blank">
-                  Patricia Lestre
-                </a>
-              </li>
-              <li>
-                <a href="https://www.facebook.com/bajocielobanda" target="_blank">
-                  Bajo Cielo
-                </a>
-              </li>
-              <li>
-                <a href="https://www.facebook.com/abandaparis" target="_blank">
-                  A Banda
-                </a>
-              </li>
-              <li>
-                <a href="https://www.youtube.com/channel/UChM5IMvM6Veb5SrQMKo9klA" target="_blank">
-                  Dullmea
-                </a>
-              </li>
-              <li>
-                <a href="https://www.facebook.com/lehna.sam.9">Lehna</a>
-              </li>
-              <li>Aurélien Hoffmann </li>
-              <li>Clémentine Fouquet</li>
-              <li>Fee Blumenthaler</li>
-              <li>Beatriz Rola</li>
-            </ul>
+      <section id="artists" class="bg-white py-10 px-4 xl:px-0">
+        <div class="mx-auto max-w-7xl text-black py-10">
+          <h2 class="text-6xl mb-2">Artistes</h2>
+          <div class="text-2xl max-w-xl">
+            <a
+              class="link-artist pl-0"
+              href="https://www.facebook.com/aquiloquevocesquiserem"
+              target="_blank"
+            >
+              Aquilo que vocês quiserem,
+            </a>
+            <a
+              class="link-artist"
+              href="https://www.facebook.com/JeanMarcSauvagnargues"
+              target="_blank"
+            >
+              Jean Marc Sauvagnargues,
+            </a>
+            <a
+              class="link-artist"
+              href="https://www.facebook.com/patricia.lestre"
+              target="_blank"
+            >
+              Patricia Lestre,
+            </a>
+            <a
+              class="link-artist"
+              href="https://www.facebook.com/bajocielobanda"
+              target="_blank"
+            >
+              Bajo Cielo,
+            </a>
+            <a
+              class="link-artist"
+              href="https://www.facebook.com/abandaparis"
+              target="_blank"
+            >
+              A Banda
+            </a>
+            <a
+              class="link-artist"
+              href="https://www.youtube.com/channel/UChM5IMvM6Veb5SrQMKo9klA"
+              target="_blank"
+            >
+              Dullmea,
+            </a>
+            <a class="link-artist" href="https://www.facebook.com/lehna.sam.9"
+              >Lehna,</a
+            >
+            Aurélien Hoffmann, Clémentine Fouquet, Fee Blumenthaler et Beatriz
+            Rola
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="profile">
-      <div class="container px-0">
-        <div class="row align-items-center justify-content-center mx-0">
-          <div class="col-md-3">
-            <img src="images/simon.png" alt="Simon Monteil" class="max-width-100" />
-            <h3>Simon Monteil</h3>
-          </div>
-          <div class="col-md-6 text-left">
-            <p>
-              Aussi loin que je m'en souvienne, j'ai toujours été passionné par l'image, que ce soit la photo ou la
-              vidéo.<br />
-              Il y a 10 ans, après une formation de 3 ans à l'ESEC ( école supérieur d'études cinématographiques de
-              Paris ), je me lançais dans la vie active.<br />
-              Fort de mon expérience de 7 ans à la télévision, je décide aujourd'hui d'être à mon compte et ainsi
-              pouvoir travailler sur des projets qui me correspondent plus.
-            </p>
-            <p>
-              Outre mon expertise, je possède du matériel audiovisuel professionnel
-              ( plusieurs caméras, stabilisateur, drone, lumières, micros, etc ) qui me permet de réaliser des vidéos de
-              qualité de la conception jusqu'à l'habillage.<br />
-              Ce site est pour moi un moyen de vous partager mon travail et peut être éveiller en vous une volonté de
-              collaboration future.
-            </p>
+      <section id="profile" class="bg-black py-20 px-4 xl:px-0">
+        <div class="mx-auto max-w-7xl text-white">
+          <h2 class="text-6xl mb-14">À propos</h2>
+          <div class="flex flex-col md:flex-row">
+            <div class="flex items-center">
+              <div class="pr-10 mb-10">
+                <img
+                  src="images/simon.png"
+                  alt="Simon Monteil"
+                  class="rounded-full"
+                />
+              </div>
+            </div>
+            <div class="max-w-prose">
+              <h3 class="text-4xl font-bold">Simon Monteil</h3>
+              <div class="mb-6">
+                <a
+                  class="text-2xl border-dashed border-b-2 pb-1"
+                  href="mailto:contact@aramisprod.fr"
+                  >contact@aramisprod.fr</a
+                >
+              </div>
+              <p class="mb-4">
+                Aussi loin que je m'en souvienne, j'ai toujours été passionné
+                par l'image, que ce soit la photo ou la vidéo.<br />
+                Il y a 10 ans, après une formation de 3 ans à l'ESEC ( école
+                supérieur d'études cinématographiques de Paris ), je me lançais
+                dans la vie active.<br />
+                Fort de mon expérience de 7 ans à la télévision, je décide
+                aujourd'hui d'être à mon compte et ainsi pouvoir travailler sur
+                des projets qui me correspondent plus.
+              </p>
+              <p>
+                Outre mon expertise, je possède du matériel audiovisuel
+                professionnel ( plusieurs caméras, stabilisateur, drone,
+                lumières, micros, etc ) qui me permet de réaliser des vidéos de
+                qualité de la conception jusqu'à l'habillage.<br />
+                Ce site est pour moi un moyen de vous partager mon travail et
+                peut être éveiller en vous une volonté de collaboration future.
+              </p>
+              <a class="text-2xl mt-10 block" href="#home">↑ Retour au début</a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
+  </body>
 
-  <footer>
-    <div class="container px-0">
-      <div class="row justify-content-center align-items-center mx-0">
-        <div class="col-lg-8 px-0">
-          Aramis Prod ·
-          <a href="mailto:contact@aramisprod.fr">
-            contact@aramisprod.fr
-          </a>
-        </div>
-      </div>
-    </div>
-  </footer>
-</body>
-
-<script src="index.js"></script>
-<script src="https://www.youtube.com/iframe_api"></script>
-
+  <script src="lite-yt-embed.js"></script>
 </html>

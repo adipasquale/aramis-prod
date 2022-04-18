@@ -1,5 +1,5 @@
 ---
-url: https://www.youtube.com/watch?v=LpBsUt_illo&t=29s
+youtubeId: LpBsUt_illo
 title: Emisphaeria
 description: "Hémisphère musical "
 position: 12

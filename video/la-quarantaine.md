@@ -1,5 +1,5 @@
 ---
-url: https://www.youtube.com/watch?v=pyxcjTfTBUs&t=3s
+youtubeId: pyxcjTfTBUs
 title: "La quarantaine "
 description: Musique de confinement en Stop Motion
 position: 2

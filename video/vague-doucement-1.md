@@ -1,5 +1,5 @@
 ---
-url: https://www.youtube.com/watch?v=x8ILwO36zog&t=13s
+youtubeId: x8ILwO36zog
 title: Vague Doucement
 description: Bossa Nova sous l'océan
 position: 3

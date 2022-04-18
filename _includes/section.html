@@ -1,23 +1,32 @@
-<section id="{{ section_id }}">
-  <div class="video-bg-wrapper">
-    <div class="video-overlay">
-      <video id="header-showreel" loop autoplay muted playsinline>
-        <source src="/images/{{ section_id }}.webm" type="video/webm">
-        <source src="/images/{{ section_id }}.mp4" type="video/mp4">
+<section class="{{ section_type }}" id="{{ section_id }}">
+  <div class="w-full">
+    <div class="relative">
+      <video
+        class="w-full object-cover max-h-96 z-10"
+        loop
+        autoplay
+        muted
+        playsinline
+      >
+        <source src="/images/{{ section_id }}.webm" type="video/webm" />
+        <source src="/images/{{ section_id }}.mp4" type="video/mp4" />
       </video>
+      <h2
+        class="text-7xl lg:text-8xl font-black z-30 p-4 lg:p-0 absolute -bottom-10 left-0 right-0"
+      >
+        <div class="max-w-7xl w-full m-auto px-5 xl:px-0">{{ section_title }}</div>
+      </h2>
     </div>
-    <div class="text-overlay">
-      <h2>{{ section_title }}</h2>
-    </div>
-  </div>
-  <div class="container px-0">
-    <div class="row justify-content-center mx-0">
-      <div class="col-lg-8 px-0">
+    <div class="max-w-7xl w-full m-auto py-10 lg:py-20 z-30 px-5 xl:px-0">
+      <div class="flex flex-wrap pt-4 pb-10 lg:pb-20">
         {% for video in videos %}
-        <div class="yt-video-wrapper">
-          <iframe src="{{ video.data.url | toYoutubeEmbedUrl }}" title="{{ video.data.title }}" frameborder="0"
-            allowfullscreen></iframe>
-          <p class="text-italic">
+        <div class="w-full md:w-1/2 p-2 z-20">
+          <lite-youtube
+            class="z-10 border-8 border-black"
+            videoid="{{ video.data.youtubeId }}"
+            params="modestbranding=1"
+          ></lite-youtube>
+          <p class="bg-black px-2 pb-2 inline-block text-xl">
             {{ video.data.description }}
           </p>
         </div>
