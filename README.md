@@ -5,6 +5,6 @@
 ## dev
 
 ```
-npm install
+npm run install
 npm run dev
 ```

@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "eleventy --serve & yarn build:css --watch & npx netlify-cms-proxy-server",
+    "dev": "eleventy --serve & npm run build:css --watch & npx netlify-cms-proxy-server",
     "build:css": "npx tailwindcss -i styles/tailwind.css -c styles/tailwind.config.js -o _site/style.css",
-    "build": "eleventy && yarn build:css"
+    "build": "eleventy && npm run build:css"
   },
   "keywords": [],
   "author": "",
