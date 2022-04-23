@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  background-color: #000;
+  color: #909090;
+  font-family: "Hahmlet", serif;
+}
+
+/* 11ty displays empty <p> around template contents */
+p:empty {
+  display: none;
+}
+
+@layer components {
+  .link-artist {
+    @apply underline hover:bg-yellow-400 hover:no-underline pl-1 transition-all;
+  }
+  .link-menu {
+    @apply bg-white px-1 py-1 hover:mr-1 transition-all;
+  }
+}

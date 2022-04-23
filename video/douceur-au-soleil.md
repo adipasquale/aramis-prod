@@ -1,5 +1,5 @@
 ---
-url: https://www.youtube.com/watch?v=66tXS7uRsKw
+youtubeId: 66tXS7uRsKw
 title: Asa branca
 description: Asa Branca sous le soleil d'hiver
 position: 2

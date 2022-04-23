@@ -10,5 +10,4 @@ function onPlayerStateChange(event) {
   }
 }
 
-
 window.setTimeout(onYouTubeIframeAPIReady, 1000)
