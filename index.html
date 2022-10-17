@@ -1,106 +1,87 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Aramis Prod</title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
-    />
-    <link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet" href="lite-yt-embed.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@400;600;800&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header id="home" class="h-screen relative">
-      <div class="absolute z-10 h-full w-full blur-sm overflow-hidden">
-        <video
-          class="w-full h-full object-cover"
-          id="header-showreel"
-          loop
-          autoplay
-          muted
-          playsinline
-        >
-          <source src="/images/header.webm" type="video/webm" />
-          <source src="/images/header.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <div
-        class="relative flex items-center justify-center text-white h-full z-20"
-      >
-        <img class="inline-block h-80 invert" src="/images/logo.png" />
-      </div>
-      <div class="w-full absolute bottom-6 z-50">
-        <a href="#intro">
-          <img class="m-auto" alt="Continuer" src="/images/scroll-down.svg" width="80px" />
-        </a>
-      </div>
-    </header>
 
-    <aside class="fixed text-right right-4 top-4 md:right-8 z-40">
-      <ul
-        class="flex flex-col items-end content-end list-none text-black text-lg font-medium"
-      >
-        <li class="mb-3">
-          <a class="link-menu" href="#music">Musique</a>
-        </li>
-        <li class="mb-3">
-          <a class="link-menu" href="#documentaires">Documentaire</a>
-        </li>
-        <li class="mb-3">
-          <a class="link-menu" href="#stopmotion">Stop-Motion</a>
-        </li>
-        <li class="mb-3">
-          <a class="link-menu" href="#drones">Drone</a>
-        </li>
-      </ul>
-    </aside>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Aramis Prod</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="lite-yt-embed.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@400;600;800&display=swap" rel="stylesheet" />
+</head>
 
-    <main>
-      <div id="intro" class="flex justify-center mx-auto max-w-7xl text-left text-white">
-        <div class="py-40 px-6 xl:px-0 w-full md:w-auto">
-          <div class="flex flex-col md:flex-row items-center">
-            <div>
-              <img class="invert pr-2" width="130px" src="/images/logo.png" />
-            </div>
-            <div class="w-full md:text-left text-center">
-              <h2 class="text-4xl md:text-6xl xl:text-7xl font-bold">
-                Aramis Prod
-              </h2>
-              <h3 class="text-xl md:text-2xl font-medium mt-2">
-                Production/Réalisation/Montage
-              </h3>
-            </div>
+<body>
+  <header id="home" class="h-screen relative">
+    <div class="absolute z-10 h-full w-full blur-sm overflow-hidden">
+      <video class="w-full h-full object-cover" id="header-showreel" loop autoplay muted playsinline>
+        <source src="/images/header.webm" type="video/webm" />
+        <source src="/images/header.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="relative flex items-center justify-center text-white h-full z-20">
+      <img class="inline-block h-80 invert" src="/images/logo.png" />
+    </div>
+    <div class="w-full absolute bottom-6 z-50">
+      <a href="#intro">
+        <img class="m-auto" alt="Continuer" src="/images/scroll-down.svg" width="80px" />
+      </a>
+    </div>
+  </header>
+
+  <aside class="fixed text-right right-4 top-4 md:right-8 z-40 text-black text-lg font-medium">
+    <!-- <a class="link-menu" href="#">Menu</a> -->
+    <ul class="flex flex-col items-end content-end list-none">
+      <li class="mb-3">
+        <a class="link-menu" href="#music">Musique</a>
+      </li>
+      <li class="mb-3">
+        <a class="link-menu" href="#decouvertes">Découvertes</a>
+      </li>
+      <li class="mb-3">
+        <a class="link-menu" href="#stopmotion">Stop-Motion</a>
+      </li>
+      <li class="mb-3">
+        <a class="link-menu" href="#drones">Drone</a>
+      </li>
+    </ul>
+  </aside>
+
+  <main>
+    <div id="intro" class="flex justify-center mx-auto max-w-7xl text-left text-white">
+      <div class="py-40 px-6 xl:px-0 w-full md:w-auto">
+        <div class="flex flex-col md:flex-row items-center">
+          <div>
+            <img class="invert pr-2" width="130px" src="/images/logo.png" />
           </div>
-          <div class="mt-4">
-            <div class="m-auto">
-              <lite-youtube
-                class="z-10 border-8 border-white"
-                videoid="_j8_CBWFIAQ"
-                params="modestbranding=1"
-              ></lite-youtube>
-              <p
-                class="bg-white text-black px-2 pb-2 inline-block text-xl uppercase"
-              >
-                Showreel
-              </p>
-            </div>
+          <div class="w-full md:text-left text-center">
+            <h2 class="text-4xl md:text-6xl xl:text-7xl font-bold">
+              Aramis Prod
+            </h2>
+            <h3 class="text-xl md:text-2xl font-medium mt-2">
+              Production/Réalisation/Montage
+            </h3>
+          </div>
+        </div>
+        <div class="mt-4">
+          <div class="m-auto">
+            <lite-youtube class="z-10 border-8 border-white" videoid="38y_OMljcPE" params="modestbranding=1">
+            </lite-youtube>
+            <p class="bg-white text-black px-2 pb-2 inline-block text-xl uppercase">
+              Showreel
+            </p>
           </div>
         </div>
       </div>
+    </div>
 
-      
-      
-      
-      
-      <section class="text-white bg-slate-500" id="music">
+    
+    
+    
+    
+    <section class="text-white bg-slate-500" id="music">
   <div class="w-full">
     <div class="relative">
       <video
@@ -113,9 +94,7 @@
         <source src="/images/music.webm" type="video/webm" />
         <source src="/images/music.mp4" type="video/mp4" />
       </video>
-      <h2
-        class="text-7xl lg:text-8xl font-black z-30 p-4 lg:p-0 absolute -bottom-10 left-0 right-0"
-      >
+      <h2 class="text-4xl md:text-6xl lg:text-8xl font-black z-30 p-4 lg:p-0 absolute -bottom-10 left-0 right-0">
         <div class="max-w-7xl w-full m-auto px-5 xl:px-0">Musique</div>
       </h2>
     </div>
@@ -304,11 +283,11 @@
 </section>
 
 
-      
-      
-      
-      
-      <section class="bg-gray-900 text-white" id="documentaires">
+    
+    
+    
+    
+    <section class="bg-gray-900 text-white" id="decouvertes">
   <div class="w-full">
     <div class="relative">
       <video
@@ -318,13 +297,11 @@
         muted
         playsinline
       >
-        <source src="/images/documentaires.webm" type="video/webm" />
-        <source src="/images/documentaires.mp4" type="video/mp4" />
+        <source src="/images/decouvertes.webm" type="video/webm" />
+        <source src="/images/decouvertes.mp4" type="video/mp4" />
       </video>
-      <h2
-        class="text-7xl lg:text-8xl font-black z-30 p-4 lg:p-0 absolute -bottom-10 left-0 right-0"
-      >
-        <div class="max-w-7xl w-full m-auto px-5 xl:px-0">Docu</div>
+      <h2 class="text-4xl md:text-6xl lg:text-8xl font-black z-30 p-4 lg:p-0 absolute -bottom-10 left-0 right-0">
+        <div class="max-w-7xl w-full m-auto px-5 xl:px-0">Découvertes</div>
       </h2>
     </div>
     <div class="max-w-7xl w-full m-auto py-10 lg:py-20 z-30 px-5 xl:px-0">
@@ -358,11 +335,11 @@
 </section>
 
 
-      
-      
-      
-      
-      <section class="bg-purple-300 text-white" id="stopmotion">
+    
+    
+    
+    
+    <section class="bg-purple-300 text-white" id="stopmotion">
   <div class="w-full">
     <div class="relative">
       <video
@@ -375,9 +352,7 @@
         <source src="/images/stopmotion.webm" type="video/webm" />
         <source src="/images/stopmotion.mp4" type="video/mp4" />
       </video>
-      <h2
-        class="text-7xl lg:text-8xl font-black z-30 p-4 lg:p-0 absolute -bottom-10 left-0 right-0"
-      >
+      <h2 class="text-4xl md:text-6xl lg:text-8xl font-black z-30 p-4 lg:p-0 absolute -bottom-10 left-0 right-0">
         <div class="max-w-7xl w-full m-auto px-5 xl:px-0">Stop-Motion</div>
       </h2>
     </div>
@@ -412,11 +387,11 @@
 </section>
 
 
-      
-      
-      
-      
-      <section class="bg-blue-200 text-white" id="drones">
+    
+    
+    
+    
+    <section class="bg-blue-200 text-white" id="drones">
   <div class="w-full">
     <div class="relative">
       <video
@@ -429,9 +404,7 @@
         <source src="/images/drones.webm" type="video/webm" />
         <source src="/images/drones.mp4" type="video/mp4" />
       </video>
-      <h2
-        class="text-7xl lg:text-8xl font-black z-30 p-4 lg:p-0 absolute -bottom-10 left-0 right-0"
-      >
+      <h2 class="text-4xl md:text-6xl lg:text-8xl font-black z-30 p-4 lg:p-0 absolute -bottom-10 left-0 right-0">
         <div class="max-w-7xl w-full m-auto px-5 xl:px-0">Drone</div>
       </h2>
     </div>
@@ -466,108 +439,80 @@
 </section>
 
 
-      <section id="artists" class="bg-white py-10 px-4 xl:px-0">
-        <div class="mx-auto max-w-7xl text-black py-10">
-          <h2 class="text-6xl mb-2">Artistes</h2>
-          <div class="text-2xl max-w-xl">
-            <a
-              class="link-artist pl-0"
-              href="https://www.facebook.com/aquiloquevocesquiserem"
-              target="_blank"
-            >
-              Aquilo que vocês quiserem,
-            </a>
-            <a
-              class="link-artist"
-              href="https://www.facebook.com/JeanMarcSauvagnargues"
-              target="_blank"
-            >
-              Jean Marc Sauvagnargues,
-            </a>
-            <a
-              class="link-artist"
-              href="https://www.facebook.com/patricia.lestre"
-              target="_blank"
-            >
-              Patricia Lestre,
-            </a>
-            <a
-              class="link-artist"
-              href="https://www.facebook.com/bajocielobanda"
-              target="_blank"
-            >
-              Bajo Cielo,
-            </a>
-            <a
-              class="link-artist"
-              href="https://www.facebook.com/abandaparis"
-              target="_blank"
-            >
-              A Banda
-            </a>
-            <a
-              class="link-artist"
-              href="https://www.youtube.com/channel/UChM5IMvM6Veb5SrQMKo9klA"
-              target="_blank"
-            >
-              Dullmea,
-            </a>
-            <a class="link-artist" href="https://www.facebook.com/lehna.sam.9"
-              >Lehna,</a
-            >
-            Aurélien Hoffmann, Clémentine Fouquet, Fee Blumenthaler et Beatriz
-            Rola
-          </div>
+    <section id="artists" class="bg-white py-10 px-4 xl:px-0">
+      <div class="mx-auto max-w-7xl text-black py-10">
+        <h2 class="text-6xl mb-2">Artistes</h2>
+        <div class="text-2xl max-w-xl">
+          <a class="link-artist pl-0" href="https://www.facebook.com/aquiloquevocesquiserem" target="_blank">
+            Aquilo que vocês quiserem,
+          </a>
+          <a class="link-artist" href="https://www.facebook.com/JeanMarcSauvagnargues" target="_blank">
+            Jean Marc Sauvagnargues,
+          </a>
+          <a class="link-artist" href="https://www.facebook.com/patricia.lestre" target="_blank">
+            Patricia Lestre,
+          </a>
+          <a class="link-artist" href="https://www.facebook.com/bajocielobanda" target="_blank">
+            Bajo Cielo,
+          </a>
+          <a class="link-artist" href="https://www.facebook.com/abandaparis" target="_blank">
+            A Banda
+          </a>
+          <a class="link-artist" href="https://www.youtube.com/channel/UChM5IMvM6Veb5SrQMKo9klA" target="_blank">
+            Dullmea,
+          </a>
+          <a class="link-artist" href="https://www.facebook.com/lehna.sam.9">Lehna,</a>
+          Aurélien Hoffmann, Clémentine Fouquet, Fee Blumenthaler et Beatriz
+          Rola
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="profile" class="bg-black py-20 px-4 xl:px-0">
-        <div class="mx-auto max-w-7xl text-white">
-          <h2 class="text-6xl mb-14">À propos</h2>
-          <div class="flex flex-col md:flex-row">
-            <div class="flex items-center">
-              <div class="pr-10 mb-10">
-                <img
-                  src="images/simon.png"
-                  alt="Simon Monteil"
-                  class="rounded-full"
-                />
-              </div>
-            </div>
-            <div class="max-w-prose">
-              <h3 class="text-4xl font-bold">Simon Monteil</h3>
-              <div class="mb-6">
-                <a
-                  class="text-2xl border-dashed border-b-2 pb-1"
-                  href="mailto:contact@aramisprod.fr"
-                  >contact@aramisprod.fr</a
-                >
-              </div>
-              <p class="mb-4">
-                Aussi loin que je m'en souvienne, j'ai toujours été passionné
-                par l'image, que ce soit la photo ou la vidéo.<br />
-                Il y a 10 ans, après une formation de 3 ans à l'ESEC ( école
-                supérieur d'études cinématographiques de Paris ), je me lançais
-                dans la vie active.<br />
-                Fort de mon expérience de 7 ans à la télévision, je décide
-                aujourd'hui d'être à mon compte et ainsi pouvoir travailler sur
-                des projets qui me correspondent plus.
-              </p>
-              <p>
-                Outre mon expertise, je possède du matériel audiovisuel
-                professionnel ( plusieurs caméras, stabilisateur, drone,
-                lumières, micros, etc ) qui me permet de réaliser des vidéos de
-                qualité de la conception jusqu'à l'habillage.<br />
-                Ce site est pour moi un moyen de vous partager mon travail et
-                peut être éveiller en vous une volonté de collaboration future.
-              </p>
-              <a class="text-2xl mt-10 block" href="#home">↑ Retour au début</a>
+    <section id="profile" class="bg-black py-20 px-4 xl:px-0">
+      <div class="mx-auto max-w-7xl text-white">
+        <h2 class="text-6xl mb-14">À propos</h2>
+        <div class="flex flex-col md:flex-row">
+          <div class="flex items-center">
+            <div class="pr-10 mb-10">
+              <img src="images/simon.jpg" alt="Simon Monteil" class="rounded-full" />
             </div>
           </div>
+          <div class="max-w-prose">
+            <h3 class="text-4xl font-bold">Simon Monteil</h3>
+            <div class="mb-6">
+              <a class="text-2xl border-dashed border-b-2 pb-1"
+                href="mailto:contact@aramisprod.fr">contact@aramisprod.fr</a>
+            </div>
+            <p class="mb-4">
+              Aussi loin que je mʼen souvienne, jʼai toujours été passionné
+              par lʼimage, que ce soit la photo ou la vidéo.<br />
+              Il y a 10 ans, après une formation de 3 ans à lʼESEC ( école
+              supérieure dʼétudes cinématographiques de Paris ), je me lançais
+              dans la vie active.<br />
+              Fort de mon expérience de 7 ans à la télévision, je décide
+              aujourdʼhui dʼêtre à mon compte et ainsi pouvoir travailler sur
+              des projets qui me correspondent plus.
+            </p>
+            <p>
+              Outre mon expertise, je possède du matériel audiovisuel
+              professionnel ( plusieurs caméras, stabilisateur, drone,
+              lumières, micros, etc ) qui me permet de réaliser des vidéos de
+              qualité de la conception jusquʼà lʼhabillage.<br />
+              Ce site est pour moi un moyen de vous partager mon travail et
+              peut être éveiller en vous une volonté de collaboration future.
+            </p>
+            <a class="text-2xl mt-10 block" href="#home">↑ Retour au début</a>
+          </div>
         </div>
-      </section>
-    </main>
-  </body>
+      </div>
+    </section>
+  </main>
+</body>
 
-  <script src="lite-yt-embed.js"></script>
+<script src="lite-yt-embed.js"></script>
+
+<style>
+
+</style>
+
 </html>
