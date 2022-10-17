@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@tailwind layout;
 
 html,
 body {
@@ -21,6 +22,7 @@ p:empty {
   .link-artist {
     @apply underline hover:bg-yellow-400 hover:no-underline pl-1 transition-all;
   }
+
   .link-menu {
     @apply bg-white px-1 py-1 hover:mr-1 transition-all;
   }

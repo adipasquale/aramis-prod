@@ -32,19 +32,24 @@
   </header>
 
   <aside class="fixed text-right right-4 top-4 md:right-8 z-40 text-black text-lg font-medium">
-    <!-- <a class="link-menu" href="#">Menu</a> -->
-    <ul class="flex flex-col items-end content-end list-none">
+    <ul class="flex flex-col items-end content-end list-none" id="menu-links">
       <li class="mb-3">
+        <a class="link-menu" href="#" id="menu-toggle">Menu</a>
+      </li>
+      <li class="hidden menu-expanded mb-3">
         <a class="link-menu" href="#music">Musique</a>
       </li>
-      <li class="mb-3">
+      <li class="hidden menu-expanded mb-3">
         <a class="link-menu" href="#decouvertes">Découvertes</a>
       </li>
-      <li class="mb-3">
+      <li class="hidden menu-expanded mb-3">
         <a class="link-menu" href="#stopmotion">Stop-Motion</a>
       </li>
-      <li class="mb-3">
+      <li class="hidden menu-expanded mb-3">
         <a class="link-menu" href="#drones">Drone</a>
+      </li>
+      <li class="hidden menu-expanded mb-3">
+        <a class="link-menu" href="#profile">Contact</a>
       </li>
     </ul>
   </aside>
@@ -173,8 +178,19 @@
 
 <script src="lite-yt-embed.js"></script>
 
-<style>
-
-</style>
+<script>
+  document.getElementById("menu-toggle").addEventListener("click", (e) => {
+    e.preventDefault()
+    document.querySelectorAll(".menu-expanded").forEach(elt => {
+      elt.classList.toggle("hidden")
+    })
+  })
+  document.querySelectorAll(".menu-expanded").forEach(elt => {
+    elt.addEventListener("click", () => {
+      console.log("waza")
+      document.querySelectorAll(".menu-expanded").forEach(e => e.classList.add("hidden"))
+    })
+  })
+</script>
 
 </html>
