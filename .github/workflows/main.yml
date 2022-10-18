@@ -24,4 +24,4 @@ jobs:
         with:
           publish_dir: ./_site
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          cname: www.aramisprod.com
+          cname: www.dipasquale.fr
