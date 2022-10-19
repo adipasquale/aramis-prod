@@ -1,5 +1,5 @@
 ---
-youtubeId: https://www.youtube.com/watch?v=skc860OlWhc
+youtubeId: skc860OlWhc
 title: Marseille
 description: Découvrez Marseille la Belle
 position: 3
