@@ -1,7 +1,7 @@
 ---
 youtubeId: https://www.youtube.com/watch?v=cVP_2RIWQMc
-title: Vous avez vu l'Eure ?
-description: Normandie vue du ciel
+title: "Normandie vue du ciel "
+description: Vous avez vu l'Eure ?
 position: 2
 tags:
   - video
