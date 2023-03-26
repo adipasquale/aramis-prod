@@ -4,5 +4,6 @@ title: Vous avez vu l'Eure ?
 description: Normandie vue du ciel
 position: 3
 tags:
+  - video
   - drones
 ---
